@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TreeFinder — Find a Local Tree Service | Grove &amp; Grand Lake, OK</title>
+<meta name="description" content="TreeFinder connects homeowners around Grove and Grand Lake, Oklahoma with local tree services. Free quotes, no lead-farm games. Tree services: free profile, no per-lead fees — pay 5% (max $125) only when a job books and pays.">
+<style>
+  :root{
+    --ink:#1d2a1e; --pine:#20512e; --pine-dark:#173d22; --moss:#e9f1e6;
+    --sand:#f7f4ec; --line:#cfd8c9; --accent:#c46a1b; --accent-dark:#9d5312;
+    --card:#ffffff; --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--sand);line-height:1.55}
+  .wrap{max-width:960px;margin:0 auto;padding:0 18px}
+  header{background:var(--pine-dark);color:#fff}
+  .header-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;flex-wrap:wrap}
+  .logo{font-size:1.45rem;font-weight:800;color:#fff;text-decoration:none;letter-spacing:.2px}
+  .logo small{display:block;font-size:.78rem;font-weight:500;opacity:.85}
+  .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;
+       padding:13px 20px;border-radius:10px;border:0;cursor:pointer;font-size:1rem;min-height:48px;line-height:1.25;text-align:center}
+  .btn:hover{background:var(--accent-dark)}
+  .btn.green{background:var(--pine)} .btn.green:hover{background:var(--pine-dark)}
+  .btn.ghost{background:transparent;color:#fff;border:2px solid #fff}
+  .btn.ghost:hover{background:rgba(255,255,255,.12)}
+  .btn.block{display:block;width:100%}
+  .hero{background:var(--pine);color:#fff;padding:38px 0 42px}
+  .hero h1{font-size:2rem;line-height:1.2;margin:0 0 12px}
+  .hero p{font-size:1.08rem;max-width:640px;margin:0 0 20px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  section{padding:34px 0}
+  section.alt{background:#fff}
+  h2{font-size:1.5rem;margin:0 0 10px;color:var(--pine-dark)}
+  h3{margin:0 0 6px}
+  .lede{font-size:1.05rem;max-width:680px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin:18px 0}
+  .badge{display:inline-block;background:var(--moss);color:var(--pine-dark);font-weight:700;font-size:.8rem;
+         padding:4px 10px;border-radius:999px;border:1px solid var(--line);margin-bottom:10px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+  .chip{background:var(--moss);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.92rem}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px}
+  .step{background:var(--moss);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+  .step b{display:block;margin-bottom:6px;color:var(--pine-dark)}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:.98rem}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+  th{background:var(--moss);color:var(--pine-dark)}
+  td.us{background:#fdf3e3;font-weight:600}
+  form{margin-top:14px}
+  label{display:block;font-weight:600;margin:14px 0 6px}
+  input,select,textarea{width:100%;padding:12px;border:1px solid #a9b8a2;border-radius:10px;font-size:1rem;background:#fff;color:var(--ink);min-height:48px}
+  textarea{min-height:110px;resize:vertical}
+  .checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:6px;margin-top:6px}
+  .checks label{font-weight:500;margin:0;display:flex;align-items:center;gap:9px;padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer}
+  .checks input{width:20px;height:20px;min-height:0;padding:0;margin:0;flex:none}
+  .fine{font-size:.88rem;color:#47543f}
+  .notice{background:#fdf3e3;border:1px solid #e4c896;border-radius:var(--radius);padding:14px 16px;margin:16px 0}
+  footer{background:var(--pine-dark);color:#e6eee1;padding:28px 0;font-size:.95rem}
+  footer a{color:#ffd9a8}
+  a{color:var(--pine)}
+  .two{display:grid;grid-template-columns:1fr;gap:0}
+  @media (min-width:760px){ .hero h1{font-size:2.5rem} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-in">
+    <a class="logo" href="#top">🌲 TreeFinder<small>Local tree services · Grove &amp; Grand Lake, Oklahoma</small></a>
+    <a class="btn" href="tel:+19186911542">Call (918) 691-1542</a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <h1>Need a tree down? Find a local tree service — free quotes, no lead-farm games.</h1>
+    <p>On the big lead sites, your request gets sold to three or four companies who each paid for it whether they win your job or not. TreeFinder works the other way: your request goes to a real local tree service, the estimate is free, and the service owes us nothing unless your job actually books and pays.</p>
+    <div class="cta-row">
+      <a class="btn" href="#quote">Request a Free Quote</a>
+      <a class="btn ghost" href="#services">I'm a Tree Service — List Free</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Request a quote</h2>
+    <p class="lede">Right now, quote requests in the Grove / Grand Lake area go to our founding service — <strong>White Wolf Tree Service LLC</strong> of Grove. More local services will be listed as they join. Every estimate is free and on-site, and the written price is the price you pay.</p>
+
+    <div class="card" id="founding">
+      <span class="badge">Founding Service #1 · Grove, OK</span>
+      <h3>White Wolf Tree Service LLC</h3>
+      <p>Tree removal, trimming, stump grinding, storm cleanup, and land clearing in Grove and around Grand Lake. Dead, leaning, or storm-damaged trees sectioned down safely and hauled off; every job starts with a free on-site look and one firm price in writing before any work starts.</p>
+      <div class="chips">
+        <span class="chip">Tree Removal</span>
+        <span class="chip">Trimming &amp; Pruning</span>
+        <span class="chip">Stump Grinding</span>
+        <span class="chip">Storm Cleanup</span>
+        <span class="chip">Land &amp; Lot Clearing</span>
+      </div>
+      <p><strong>Service area:</strong> Grove and within about 45 miles around Grand Lake — including Jay, Afton, Miami, Vinita, Fairland, Wyandotte, Seneca, and the lake towns in between. White Wolf is a service-area business — the work comes to your property.</p>
+      <p><strong>Free on-site estimate</strong> on every job — no hourly meters, no surprises added later.</p>
+      <div class="cta-row">
+        <a class="btn green" href="tel:+19186911542">Call (918) 691-1542</a>
+      </div>
+    </div>
+
+    <div class="card" id="quote">
+      <h3>Tell us about the job</h3>
+      <p>Fill this in and hit send — it opens your email app with everything addressed to us. Prefer to just call? <a href="tel:+19186911542">(918) 691-1542</a>. A tree on a house or blocking a driveway? Call — those get answered first.</p>
+      <form id="quoteForm">
+        <label for="q-name">Your name</label>
+        <input id="q-name" name="name" type="text" autocomplete="name" required>
+        <label for="q-phone">Phone (so the service can reach you)</label>
+        <input id="q-phone" name="phone" type="tel" autocomplete="tel">
+        <label for="q-town">Town / area</label>
+        <input id="q-town" name="town" type="text" placeholder="e.g. Grove, near Grand Lake">
+        <label for="q-type">What do you need?</label>
+        <select id="q-type" name="type">
+          <option>Tree removal</option>
+          <option>Trimming / pruning</option>
+          <option>Stump grinding</option>
+          <option>Storm cleanup</option>
+          <option>Land / lot clearing</option>
+          <option>Not sure — need advice</option>
+        </select>
+        <label for="q-notes">Tell us about the tree(s)</label>
+        <textarea id="q-notes" name="notes" placeholder="How many trees, how big, what's nearby (house, fence, power lines), and how soon?"></textarea>
+        <p style="margin-top:18px"><button class="btn block" type="submit">Send My Request</button></p>
+      </form>
+      <p class="fine">No email app opening? Write to us directly at <a href="mailto:whitewolfbackoffice@gmail.com">whitewolfbackoffice@gmail.com</a> with the subject <strong>Tree quote request</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="services">
+  <div class="wrap">
+    <h2>Run a tree service? Get listed free — and stop paying for leads that go nowhere.</h2>
+    <p class="lede">Here's the deal, in plain words:</p>
+    <div class="steps">
+      <div class="step"><b>Free profile. $0 per lead.</b>Your business is listed with your services, your area, and your work photos. Homeowner requests come to you free — no lead fees, no credits, nothing that expires.</div>
+      <div class="step"><b>You only pay when you get paid.</b>If a job books and pays through TreeFinder, the platform fee is <strong>5% of the job — capped at $125</strong>, no matter how big the removal. No job, no fee. Ever.</div>
+      <div class="step"><b>Bids run through TreeBid Pro.</b>A request opens as a ready-to-price draft in TreeBid Pro, the bid app built for tree work. Price it with your own rates; the quote of record lives in one place.</div>
+    </div>
+
+    <h3 style="margin-top:26px">What the same booked job costs you on the lead sites vs. here</h3>
+    <div style="overflow-x:auto">
+    <table>
+      <tr><th></th><th>On a $800 job</th><th>On a $1,500 job</th><th>On a $2,500 job</th></tr>
+      <tr><td class="us"><strong>TreeFinder — 5%, capped at $125, only when the job books &amp; pays</strong></td><td class="us">$40</td><td class="us">$75</td><td class="us">$125</td></tr>
+      <tr><td>Angi / HomeAdvisor — pay $15–$85 per lead, win or lose, shared with up to 4 pros (plus a ~$300/yr membership). Estimated cost per <em>booked</em> job:</td><td colspan="3">$180–$1,000 depending on close rate</td></tr>
+      <tr><td>Thumbtack — pay per contact, no refund if the homeowner ghosts. Estimated cost per <em>booked</em> job:</td><td colspan="3">~$200–$500</td></tr>
+      <tr><td>Exclusive tree-lead sellers — $30–$90 per lead, still win or lose. Cost per booked job at a generous 40% close rate:</td><td colspan="3">$75–$225</td></tr>
+    </table>
+    </div>
+    <p class="fine">Lead prices swing by ZIP code and season; the ranges above come from contractor reports and third-party fee trackers published in 2026 — no lead platform publishes a rate card. The TreeFinder row is exact: 5%, $125 cap, $0 if the job doesn't book.</p>
+
+    <div class="notice"><strong>Founding Services offer:</strong> the first 10 tree services to register are Founding Services — badge on your profile for good, and the platform fee is <strong>waived on your first 3 booked jobs</strong>. We're launching around Grove and Grand Lake first.</div>
+
+    <div class="card">
+      <h3>Claim a free founding profile</h3>
+      <p>Fill this in and hit send — it opens your email app addressed to us. We set your profile up with you; nothing goes live with your name on it until you've seen it.</p>
+      <form id="proForm">
+        <label for="p-biz">Business name</label>
+        <input id="p-biz" name="biz" type="text" autocomplete="organization" required>
+        <label for="p-owner">Your name</label>
+        <input id="p-owner" name="owner" type="text" autocomplete="name" required>
+        <label for="p-phone">Phone</label>
+        <input id="p-phone" name="phone" type="tel" autocomplete="tel">
+        <label for="p-email">Email</label>
+        <input id="p-email" name="email" type="email" autocomplete="email">
+        <label for="p-area">Towns / area you cover</label>
+        <input id="p-area" name="area" type="text" placeholder="e.g. Grove, Jay, Grand Lake south shore">
+        <label>Services you offer</label>
+        <div class="checks">
+          <label><input type="checkbox" name="svc" value="Tree removal"> Tree removal</label>
+          <label><input type="checkbox" name="svc" value="Trimming / pruning"> Trimming / pruning</label>
+          <label><input type="checkbox" name="svc" value="Stump grinding"> Stump grinding</label>
+          <label><input type="checkbox" name="svc" value="Storm cleanup"> Storm cleanup</label>
+          <label><input type="checkbox" name="svc" value="Land / lot clearing"> Land / lot clearing</label>
+          <label><input type="checkbox" name="svc" value="Other"> Other</label>
+        </div>
+        <label for="p-notes">Anything else (crew size, equipment, how far you'll travel)</label>
+        <textarea id="p-notes" name="notes"></textarea>
+        <p style="margin-top:18px"><button class="btn green block" type="submit">Claim My Free Profile</button></p>
+      </form>
+      <p class="fine">No email app opening? Write to us directly at <a href="mailto:whitewolfbackoffice@gmail.com">whitewolfbackoffice@gmail.com</a> with the subject <strong>Founding tree service</strong>. Registering is free and isn't a contract — the 5%-only-when-you-get-paid terms are the whole agreement, in writing, before your profile goes live.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How TreeFinder works</h2>
+    <div class="steps">
+      <div class="step"><b>1. You post the job</b>Homeowner describes the work — type, town, what's nearby. Free, no account needed.</div>
+      <div class="step"><b>2. Local services bid in TreeBid</b>Matching services price the job with their own rates in TreeBid Pro and send a firm written quote.</div>
+      <div class="step"><b>3. You pick one and book</b>The booked price is the price. The service pays 5% (max $125) only when the job is done and paid — that's the entire business model.</div>
+    </div>
+    <p class="fine" style="margin-top:16px">The straight fine print: TreeFinder is new and launching locally — right now the only listed service is our founding service, White Wolf Tree Service LLC, and homeowner requests go to it. TreeFinder does not guarantee, endorse, or verify any listed business's work, licensing, or insurance — any insurance or license shown on a future profile is self-reported by that business unless it says "certificate on file." Always ask whoever you hire for references. TreeFinder is a project of White Wolf Apps.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong>TreeFinder</strong> — local tree services, honest fees · Grove &amp; Grand Lake, Oklahoma</div>
+    <div style="margin-top:8px">Homeowners: <a href="tel:+19186911542">call (918) 691-1542</a> · Tree services &amp; questions: <a href="mailto:whitewolfbackoffice@gmail.com">whitewolfbackoffice@gmail.com</a></div>
+    <p class="fine" style="color:#c9d6c2">Built by White Wolf Apps alongside TreeBid Pro, the bid app for tree services.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  function send(formId, subject, build){
+    var f = document.getElementById(formId);
+    f.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var lines = build(f);
+      var url = 'mailto:whitewolfbackoffice@gmail.com'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(lines.join('\n'));
+      window.location.href = url;
+    });
+  }
+  function val(f, name){ var el = f.elements[name]; return el ? (el.value || '').trim() : ''; }
+  send('quoteForm', 'Tree quote request — TreeFinder', function(f){
+    return [
+      'Name: ' + val(f,'name'),
+      'Phone: ' + val(f,'phone'),
+      'Town / area: ' + val(f,'town'),
+      'Work needed: ' + val(f,'type'),
+      '',
+      'About the job:',
+      val(f,'notes')
+    ];
+  });
+  send('proForm', 'Founding tree service — TreeFinder', function(f){
+    var svcs = [];
+    var boxes = f.querySelectorAll('input[name="svc"]:checked');
+    for (var i = 0; i < boxes.length; i++) svcs.push(boxes[i].value);
+    return [
+      'Business: ' + val(f,'biz'),
+      'Owner: ' + val(f,'owner'),
+      'Phone: ' + val(f,'phone'),
+      'Email: ' + val(f,'email'),
+      'Service area: ' + val(f,'area'),
+      'Services: ' + svcs.join(', '),
+      '',
+      'Notes:',
+      val(f,'notes')
+    ];
+  });
+})();
+</script>
+</body>
+</html>
