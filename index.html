@@ -56,6 +56,10 @@
   .checks input{width:20px;height:20px;min-height:0;padding:0;margin:0;flex:none}
   .fine{font-size:.88rem;color:#47543f}
   .notice{background:#fdf3e3;border:1px solid #e4c896;border-radius:var(--radius);padding:14px 16px;margin:16px 0}
+  .job-card h3{font-size:1.15rem;color:var(--pine-dark)}
+  .job-card p{margin:6px 0}
+  .job-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.95rem;color:#47543f;align-items:center}
+  .job-meta .claim{margin-left:auto;font-weight:700}
   footer{background:var(--pine-dark);color:#e6eee1;padding:28px 0;font-size:.95rem}
   footer a{color:#ffd9a8}
   a{color:var(--pine)}
@@ -78,6 +82,7 @@
     <p>On the big lead sites, your request gets sold to three or four companies who each paid for it whether they win your job or not. TreeFinder works the other way: your request goes to a real local tree service, the estimate is free, and the service owes us nothing unless your job actually books and pays.</p>
     <div class="cta-row">
       <a class="btn" href="#quote">Request a Free Quote</a>
+      <a class="btn ghost" href="#jobs">See Recent Job Requests</a>
       <a class="btn ghost" href="#services">I'm a Tree Service — List Free</a>
     </div>
   </div>
@@ -134,14 +139,27 @@
   </div>
 </section>
 
-<section class="alt" id="services">
+<section class="alt" id="jobs">
+  <div class="wrap">
+    <h2>Recent tree job requests near Grand Lake</h2>
+    <p class="lede">Real requests from local homeowners, gathered from community boards around Grove and Grand Lake and from homeowners who post here. Names and contact details are never published — when a local service claims a job, we pass the details along privately.</p>
+    <div id="jobsBoard"><p class="fine">Loading recent requests…</p></div>
+    <div id="jobsEmpty" hidden>
+      <div class="notice"><strong>No open requests right now.</strong> Be the first — post your tree job free and it goes straight to a local service for a free quote.</div>
+      <p><a class="btn" href="#quote">Post Your Tree Job Free</a></p>
+    </div>
+    <p class="fine">Listings show the town, the work needed, and when the request was posted — nothing personal. Requests come off the board once they're claimed or after 30 days. Tree services: <a href="#services">get listed free</a> to claim jobs like these.</p>
+  </div>
+</section>
+
+<section id="services">
   <div class="wrap">
     <h2>Run a tree service? Get listed free — and stop paying for leads that go nowhere.</h2>
     <p class="lede">Here's the deal, in plain words:</p>
     <div class="steps">
       <div class="step"><b>Free profile. $0 per lead.</b>Your business is listed with your services, your area, and your work photos. Homeowner requests come to you free — no lead fees, no credits, nothing that expires.</div>
       <div class="step"><b>You only pay when you get paid.</b>If a job books and pays through TreeFinder, the platform fee is <strong>5% of the job — capped at $125</strong>, no matter how big the removal. No job, no fee. Ever.</div>
-      <div class="step"><b>Bids run through TreeBid Pro.</b>A request opens as a ready-to-price draft in TreeBid Pro, the bid app built for tree work. Price it with your own rates; the quote of record lives in one place.</div>
+      <div class="step"><b>Bids run through TreeBid Pro.</b>A request opens as a ready-to-price draft in <a href="https://whitewolfoklahoma-rgb.github.io/branchmath-share/" target="_blank" rel="noopener">TreeBid Pro</a>, the bid app built for tree work. Price it with your own rates; the quote of record lives in one place.</div>
     </div>
 
     <h3 style="margin-top:26px">What the same booked job costs you on the lead sites vs. here</h3>
@@ -195,7 +213,7 @@
     <h2>How TreeFinder works</h2>
     <div class="steps">
       <div class="step"><b>1. You post the job</b>Homeowner describes the work — type, town, what's nearby. Free, no account needed.</div>
-      <div class="step"><b>2. Local services bid in TreeBid</b>Matching services price the job with their own rates in TreeBid Pro and send a firm written quote.</div>
+      <div class="step"><b>2. Local services bid in TreeBid</b>Matching services price the job with their own rates in <a href="https://whitewolfoklahoma-rgb.github.io/branchmath-share/" target="_blank" rel="noopener">TreeBid Pro</a> and send a firm written quote.</div>
       <div class="step"><b>3. You pick one and book</b>The booked price is the price. The service pays 5% (max $125) only when the job is done and paid — that's the entire business model.</div>
     </div>
     <p class="fine" style="margin-top:16px">The straight fine print: TreeFinder is new and launching locally — right now the only listed service is our founding service, White Wolf Tree Service LLC, and homeowner requests go to it. TreeFinder does not guarantee, endorse, or verify any listed business's work, licensing, or insurance — any insurance or license shown on a future profile is self-reported by that business unless it says "certificate on file." Always ask whoever you hire for references. TreeFinder is a project of White Wolf Apps.</p>
@@ -206,7 +224,7 @@
   <div class="wrap">
     <div><strong>TreeFinder</strong> — local tree services, honest fees · Grove &amp; Grand Lake, Oklahoma</div>
     <div style="margin-top:8px">Homeowners: <a href="tel:+19186911542">call (918) 691-1542</a> · Tree services &amp; questions: <a href="mailto:whitewolfbackoffice@gmail.com">whitewolfbackoffice@gmail.com</a></div>
-    <p class="fine" style="color:#c9d6c2">Built by White Wolf Apps alongside TreeBid Pro, the bid app for tree services.</p>
+    <p class="fine" style="color:#c9d6c2">Built by White Wolf Apps alongside <a href="https://whitewolfoklahoma-rgb.github.io/branchmath-share/" target="_blank" rel="noopener">TreeBid Pro</a>, the bid app for tree services.</p>
   </div>
 </footer>
 
@@ -235,6 +253,51 @@
       val(f,'notes')
     ];
   });
+  // ---- Recent job requests board (data: jobs.json next to this page) ----
+  (function(){
+    var board = document.getElementById('jobsBoard');
+    var empty = document.getElementById('jobsEmpty');
+    if (!board || !empty) return;
+    function esc(s){
+      return String(s == null ? '' : s)
+        .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+        .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+    }
+    var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    function fmtDate(iso){
+      var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso || ''));
+      if (!m) return esc(iso);
+      return MONTHS[parseInt(m[2],10)-1] + ' ' + parseInt(m[3],10) + ', ' + m[1];
+    }
+    function srcLabel(src){
+      if (src === 'Facebook group') return 'Via Facebook group';
+      if (src === 'Craigslist') return 'Via Craigslist';
+      return 'Posted on TreeFinder';
+    }
+    function showEmpty(){ board.innerHTML = ''; empty.hidden = false; }
+    function render(jobs){
+      if (!jobs || !jobs.length) { showEmpty(); return; }
+      empty.hidden = true;
+      board.innerHTML = jobs.map(function(j){
+        var claim = 'mailto:whitewolfbackoffice@gmail.com'
+          + '?subject=' + encodeURIComponent('Claim job ' + (j.id || '') + ' — ' + (j.type || 'Tree work') + ' in ' + (j.town || 'Grand Lake area'))
+          + '&body=' + encodeURIComponent('I run a local tree service and want to claim TreeFinder job ' + (j.id || '') + ' (' + (j.type || '') + ', ' + (j.town || '') + ', posted ' + (j.date || '') + ').\n\nMy business:\nMy phone:');
+        return '<div class="card job-card">'
+          + '<span class="badge">' + esc(srcLabel(j.source)) + '</span>'
+          + '<h3>' + esc(j.type || 'Tree work') + '</h3>'
+          + '<p>' + esc(j.description || '') + '</p>'
+          + '<div class="job-meta"><span>📍 ' + esc(j.town || '') + '</span>'
+          + '<span>Posted ' + esc(fmtDate(j.date)) + '</span>'
+          + '<a class="claim" href="' + claim + '">Tree services: claim this job →</a></div>'
+          + '</div>';
+      }).join('');
+    }
+    fetch('jobs.json', { cache: 'no-store' })
+      .then(function(r){ if (!r.ok) throw new Error('jobs ' + r.status); return r.json(); })
+      .then(function(data){ render(data && data.jobs); })
+      .catch(function(){ showEmpty(); });
+  })();
+
   send('proForm', 'Founding tree service — TreeFinder', function(f){
     var svcs = [];
     var boxes = f.querySelectorAll('input[name="svc"]:checked');
